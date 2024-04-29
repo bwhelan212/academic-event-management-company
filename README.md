@@ -1,2 +1,2 @@
 # academic-event-management-company-
-semester project for cpsc332
+semester project for cpsc332.
