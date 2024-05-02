@@ -26,7 +26,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         define("DB_PASSWORD", "");
         define("DB_NAME", "company");
 
-        $db = mysqli_connect(DB_Server, DB_USERNAME, DB_PASSWORD, DB_NAME);
+        $db = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
         if (mysqli_connect_errno()) {
             $error_msg = "Database connection unsuccessful: ";
@@ -34,10 +34,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
             $error_msg .= " (" . mysqli_connect_errno() . ")";
             exit($error_msg);
         }
-
     }
-
-    
 }
 ?>
 <!DOCTYPE html>
@@ -49,12 +46,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 <body>
     <form action="" method ='post'>
-        <label for="first-name">First name:</label>
-        <input type="text" id="first-name" name="first-name">
-
-        <label for="last-name">Last Name: </label>
-        <input type="text" id="last-name" name="last-name">
-
         <label for="email"><span>*</span>Email:</label>
         <input type="text" name = "email" id = "email" placeholder='bob@gmail.com' required >
 

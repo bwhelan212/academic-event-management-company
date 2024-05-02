@@ -1,3 +1,29 @@
+<?php
+if($_SERVER['REQUEST_METHOD'] == 'POST') {
+    //data from form post
+    
+    //validation
+
+    //add password confirmation if we want
+
+    //if valid insert the email and password into db
+    if($isvalid) {
+        define("DB_SERVER", "localhost");
+        define("DB_USERNAME","root");
+        define("DB_PASSWORD", "");
+        define("DB_NAME", "company");
+
+        $db = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+
+        if (mysqli_connect_errno()) {
+            $error_msg = "Database connection unsuccessful: ";
+            $error_msg .= mysqli_connect_error();
+            $error_msg .= " (" . mysqli_connect_errno() . ")";
+            exit($error_msg);
+        }
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
