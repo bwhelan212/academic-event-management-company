@@ -1,11 +1,12 @@
-
+<!-- close all the connections -->
 <?php
-   
+   error_reporting(E_ALL);
+   ini_set('display_errors', 1);
     // server, username, password, and database name as constants
     define("DB_SERVER", "localhost");
-    define("DB_USERNAME","root");
+    define("DB_USERNAME", "root");
     define("DB_PASSWORD", "");
-    define("DB_NAME", "company");
+    define("DB_NAME", "AEM2");
   
     //database connection
     $db = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
@@ -34,3 +35,7 @@
 <br>
 </body>
 </html>
+
+<?php
+
+?>
