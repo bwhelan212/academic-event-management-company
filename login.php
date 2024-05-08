@@ -1,10 +1,11 @@
 <?php
-  error_reporting(E_ALL);
-  ini_set('display_errors', 1);
-if($_SERVER['REQUEST_METHOD'] == 'POST') {
-    //data from form post
-    $email= $_POST['email'] ?? '';
-    $password= $_POST['password'] ?? '';
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
+    session_start();
+    if($_SERVER['REQUEST_METHOD'] == 'POST') {
+        //data from form post
+        $email= $_POST['email'] ?? '';
+        $password= $_POST['password'] ?? '';
 
     //validation
 
@@ -47,7 +48,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if($count == 1) {
             $_SESSION['email_user'] = $email;
-            header('location: event-page.php');
+            header('location: event-page.php?email=' .$email);
+            exit();
         } else {
             $error = "Your Email or Password is invalid";
             echo "invalid email or pass";
@@ -65,7 +67,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 <body>
     <form action="" method ='post'>
-        <label for="email"><span>*</span>Email:</label>
+        <label for="email"><span>*</span>Email</label>
         <input type="text" name = "email" id = "email" placeholder='bob@gmail.com' required >
 
         <label for="password"><span>*</span>Password:</label>
@@ -76,5 +78,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     
 </body>
 </html>
-
+<!-- event page
+print the events that the user organizes or attends
+-->
 
