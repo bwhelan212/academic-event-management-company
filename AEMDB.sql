@@ -241,30 +241,26 @@ VALUES
     (2, 2), -- User with ID 2 organizes Event with ID 2
     (3, 3); -- User with ID 3 organizes Event with ID 3
     
-USE AEM2;
-SELECT DISTINCT ED.*
-FROM EVENT_DETAILS ED
-LEFT JOIN ORGANIZES O ON ED.Event_ID = O.Event_ID
-LEFT JOIN USER_DETAILS UDO ON O.User_ID = UDO.User_ID
-LEFT JOIN ATTENDS A ON ED.Event_ID = A.Event_ID
-LEFT JOIN USER_DETAILS UDA ON A.User_ID = UDA.User_ID
-WHERE (UDO.Email = 'user_email@example.com' OR UDA.Email = 'user_email@example.com');
 
 USE AEM2;
-
+SELECT * FROM USER_DETAILS;
 
 INSERT INTO EVENT_DETAILS (Event_name, Event_description, Event_type, Publish_datetime, Start_datetime, End_datetime, Maximum_capacity, Last_timestamp_event)
 VALUES 
     ('Conference Z', 'Poster for conference 2', 'Poster', '2024-05-01 11:00:00', '2024-06-01 04:00:00', '2024-06-03 11:00:00', 500, '2024-05-01 02:00:00');
 
-USE AEM2;
-SELECT * FROM USER_DETAILS;
 
 USE AEM2;
-INSERT INTO ATTENDS (User_ID, Event_ID)
+INSERT INTO EVENT_DETAILS (Event_name, Event_description, Event_type, Publish_datetime, Start_datetime, End_datetime, Maximum_capacity, Last_timestamp_event)
+VALUES 
+    ('Welcome event', '', 'Poster', '2024-04-01 11:30:00', '2024-05-01 07:45:00', '2024-06-03 12:40:00', 500, '2024-05-01 07:30:00'),
+	('Safety presentation', '', 'Oral presentation', '2024-04-01 11:30:00', '2024-05-01 07:45:00', '2024-06-03 12:40:00', 500, '2024-05-01 07:30:00');    
+
+INSERT INTO ORGANIZES (User_ID, Event_ID)
 VALUES
-    (4, 5);
-    
+    (6, 7),
+    (6, 8);
+
 -- USE AEM2;
 -- SELECT DISTINCT ED.*
 -- FROM EVENT_DETAILS ED
