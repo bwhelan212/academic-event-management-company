@@ -35,7 +35,7 @@ $sql .= "LEFT JOIN ORGANIZES O ON ED.Event_ID = O.Event_ID ";
 $sql .= "LEFT JOIN USER_DETAILS UDO ON O.User_ID = UDO.User_ID ";
 $sql .= "LEFT JOIN ATTENDS A ON ED.Event_ID = A.Event_ID ";
 $sql .= "LEFT JOIN USER_DETAILS UDA ON A.User_ID = UDA.User_ID ";
-$sql .= "WHERE (UDO.Email = 'bjoe99@gmail.com' OR UDA.Email = 'bjoe99@gmail.com') ";
+$sql .= "WHERE (UDO.Email = '$email' OR UDA.Email = '$email') ";
 
 //execute query
 $result = mysqli_query($db, $sql);
