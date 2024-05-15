@@ -1,9 +1,12 @@
+
+<!-- add edit event, cancel event -->
 <?php
 /*
 echo $_SERVER['SERVER_NAME'] ."<br>";
 echo $_SERVER['REMOTE_ADDR'] . "<br>";
 echo $_SERVER['HTTP_HOST'] . "<br>";
 */
+session_start();
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
@@ -12,6 +15,12 @@ if(!isset($_GET['email'])) {
     header("location:index.php");
 }
 $email = $_GET['email'];
+
+if(!isset($_SESSION['user_id'])) {
+    header("location:index.php");
+}
+$user_id = $_SESSION['user_id'];
+echo $user_id;
 
 
 //configuration
@@ -45,7 +54,6 @@ if (!$result) {
     exit("Database query failed.");
 }
 
-//display query
 ?>
 
 
