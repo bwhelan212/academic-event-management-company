@@ -80,8 +80,7 @@
                     <td><?php echo $event['Start_datetime']; ?></td>
                     <td><?php echo $event['End_datetime']; ?></td>
                     <td>
-                        <td><?php echo ("<a href='event-signup.php?event_id=" .$event['Event_ID']. "'>Add</a>") ?></td>
-
+                        <a href='event-signup.php?event_id=<?php echo $event['Event_ID']; ?>&user_id=<?php echo $user_id; ?>'>Add</a>
                     </td>
                 </tr>
             <?php } // end loop ?>
