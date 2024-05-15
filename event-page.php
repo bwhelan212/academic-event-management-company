@@ -20,7 +20,7 @@ if(!isset($_SESSION['user_id'])) {
     header("location:index.php");
 }
 $user_id = $_SESSION['user_id'];
-echo $user_id;
+
 
 
 //configuration
