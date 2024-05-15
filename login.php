@@ -63,19 +63,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="login.css">
     <title>Log in</title>
 </head>
 <body>
-    <form action="" method ='post'>
-        <label for="email"><span>*</span>Email</label>
-        <input type="text" name = "email" id = "email" placeholder='bob@gmail.com' required >
 
-        <label for="password"><span>*</span>Password:</label>
-        <input type="text" name = "password" id = "password" placeholder='Enter password' required>
-
-         <button type="submit">Submit</button>
+<div class="wrapper">
+    <form action="">
+        <h1>Login</h1>
+        <div class="input-box">
+            <input type="email" placeholder="Email" required>
+            <i class='bx bx-user-pin'></i>
+        </div>
+        <div class="input-box">
+            <input type="password" placeholder="Password" required>
+            <i class='bx bxs-lock-alt' ></i>
+        </div>
+        <div class="remember-forgot">
+            <label><input type="checkbox" placeholder="Remember Me">Remember Me</label>
+            <a href="#"> Forgot Password?</a>
+        </div>
+        <button type="Submit" class="btn">Log in</button>
     </form>
-    
+
+
+
+
+
+</div>
+
 </body>
 </html>
 <!-- event page
