@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <title>Your Events</title>
+</head>
+<body class="bg-gray-50 p-4">
+    <div class="px-4 sm:px-6 lg:px-8">
+        <div class="sm:flex sm:items-center">
+            <div class="sm:flex-auto">
+                <h1 class="text-base font-semibold leading-6 text-gray-900">Events</h1>
+                <p class="mt-2 text-sm text-gray-700">Add events or sign up for other Events</p>
+            </div>
+            <div class=" sm:ml-16 sm:mt-0 sm:flex-none flex flex-row gap-x-2 mt-4">
+                <a href="event-signup.php">
+                    <button type="button" class="my-auto block rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Event sign up</button>
+                </a>
+                <a href="add-event.php">
+                    <button type="button" class="my-auto block rounded-md bg-indigo-600 px-3 py-2  text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Add event</button>
+                </a>
+            </div>
+        </div>
+        <div class="mt-8 flow-root">
+            <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
+                    <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 sm:rounded-lg">
+                        <table class="min-w-full divide-y divide-gray-300">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">Event ID</th>
+                                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Event Name</th>
+                                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Event Description</th>
+                                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Event Type</th>
+                                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Publish Datetime</th>
+                                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Start Datetime</th>
+                                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">End Datetime</th>
+                                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Maximum Capacity</th>
+                                    <th scope="col" class="relative py-3.5 pl-3 pr-4 sm:pr-6">Timestamp</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200 bg-white">
+                                <!-- Example row (replace or repeat this block with actual data) -->
+                                <tr>
+                                    <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">1</td>
+                                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Sample Event</td>
+                                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Description of the sample event.</td>
+                                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Type A</td>
+                                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">2024-05-15 10:00 AM</td>
+                                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">2024-06-01 09:00 AM</td>
+                                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">2024-06-01 05:00 PM</td>
+                                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">100</td>
+                                    <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
+                                        <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit<span class="sr-only">, Sample Event</span></a>
+                                    </td>
+                                </tr>
+                                <!-- More rows... -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
