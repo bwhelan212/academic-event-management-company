@@ -26,12 +26,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome!</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-    <h3> Welcome to the Academic Event Management Company! <br>Log in or Sign up to continue!</h3>
-    <a href="login.php">Log in </a>
-    <br>
-    <a href = "signup.php">Sign up</a>
+    <div class="container">
+        <h1> Welcome to the Academic Event Management Company!</h1>
+        <h2>Please log in or sign up to continue!</h2>
+    </div>
+
+    <div class="glass-container">
+        <a href="login.php"><i class="fa-solid fa-right-to-bracket"></i></a>
+        <br>
+        <a href = "signup.php"><i class="fa-regular fa-registered"></i></a>
+    </div>
 <br>
 </body>
 </html>
