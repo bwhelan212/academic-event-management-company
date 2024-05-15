@@ -22,6 +22,7 @@
 
     //add password confirmation if we want
 
+
    // retrieve query from db for login and if in db go to event-page
     if($isvalid) {
         define("DB_SERVER", "localhost");
@@ -70,14 +71,14 @@
 <body>
 
 <div class="wrapper">
-    <form action="">
+    <form action="" method = 'post'>
         <h1>Login</h1>
         <div class="input-box">
-            <input type="email" placeholder="Email" required>
+            <input type="email" placeholder="Email" name ="email" id = "email" required>
             <i class='bx bx-user-pin'></i>
         </div>
         <div class="input-box">
-            <input type="password" placeholder="Password" required>
+            <input type="password" name="password" id ="password" placeholder="Password" required>
             <i class='bx bxs-lock-alt' ></i>
         </div>
         <div class="remember-forgot">
@@ -86,10 +87,6 @@
         </div>
         <button type="Submit" class="btn">Log in</button>
     </form>
-
-
-
-
 
 </div>
 
