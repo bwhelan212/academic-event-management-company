@@ -72,7 +72,7 @@ if (!$result) {
                 <p class="mt-2 text-sm text-gray-700">Add events or sign up for other Events</p>
             </div>
             <div class=" sm:ml-16 sm:mt-0 sm:flex-none flex flex-row gap-x-2 mt-4">
-                <a href="event-signup.php">
+            <a href="event-signup.php">
                     <button type="button" class="my-auto block rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Event sign up</button>
                 </a>
                 <a href="add-event.php">
