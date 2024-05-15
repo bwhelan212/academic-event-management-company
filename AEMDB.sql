@@ -261,27 +261,33 @@ VALUES
     (6, 7),
     (6, 8);
 
-USE AEM2;
-SELECT DISTINCT ED.*
-FROM EVENT_DETAILS ED
-LEFT JOIN ORGANIZES O ON ED.Event_ID = O.Event_ID
-LEFT JOIN USER_DETAILS UDO ON O.User_ID = UDO.User_ID
-LEFT JOIN ATTENDS A ON ED.Event_ID = A.Event_ID
-LEFT JOIN USER_DETAILS UDA ON A.User_ID
- = UDA.User_ID
-WHERE (UDO.Email = 'bjoe99@gmail.com' OR UDA.Email = 'bjoe99@gmail.com');
-USE AEM2;
-select user_password, user_first_name,email from user_details;
+-- USE AEM2;
+-- SELECT DISTINCT ED.*
+-- FROM EVENT_DETAILS ED
+-- LEFT JOIN ORGANIZES O ON ED.Event_ID = O.Event_ID
+-- LEFT JOIN USER_DETAILS UDO ON O.User_ID = UDO.User_ID
+-- LEFT JOIN ATTENDS A ON ED.Event_ID = A.Event_ID
+-- LEFT JOIN USER_DETAILS UDA ON A.User_ID
+--  = UDA.User_ID
+-- WHERE (UDO.Email = 'bjoe99@gmail.com' OR UDA.Email = 'bjoe99@gmail.com');
+-- USE AEM2;
+-- select user_password, user_first_name,email from user_details;
 
 USE AEM2;
-select * FROM event_details;
+
+INSERT INTO USER_DETAILS (User_first_name, User_last_name, User_password, Last_timestamp_user, Email, Phone)
+VALUES ('Dog', 'CAt', 'cat_pass', CURRENT_TIMESTAMP, 'catdog99@gmail.com', '5534567890');
+
+select event_id, event_name from event_details;
+INSERT INTO ATTENDS (User_ID, Event_ID) VALUES
+    (116, 1),
+    (116, 2), 
+    (116, 5; 
 
 USE AEM2;
 INSERT INTO EVENT_DETAILS (Event_name, Event_description, Event_type, Publish_datetime, Start_datetime, End_datetime, Maximum_capacity, Last_timestamp_event)
 VALUES ('Large Event', 'big event with 100+ attendees', 'Conference', '2024-05-15 10:00:00', '2024-06-01 09:00:00', '2024-06-03 18:00:00', 150, '2024-05-15 10:00:00');
 
-use AEM2;
-select event_id, event_name from event_details;
 
 INSERT INTO USER_DETAILS (User_first_name, User_last_name, User_password, Last_timestamp_user, Email, Phone)
 VALUES
